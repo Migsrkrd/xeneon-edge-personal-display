@@ -1,0 +1,119 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #f0f0f0;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a0a1f 50%, #0f0a1a 100%);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    touch-action: pan-y; /* allows vertical panning, discourages horizontal */
+
+}
+
+@keyframes gridPulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.parentStyle {
+  position: relative;
+  min-height: 100vh; /* Add this - gives the parent a height */
+  width: 100vw;
+  overflow: hidden; /* Optional - prevents scrollbars from pseudo-elements */
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.parentStyle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.1) 3px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 3px, transparent 2px);
+  background-size: 50px 50px;
+  animation: gridPulse 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0; /* Make sure it's behind your content */
+}
+
+.parentStyle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  animation: scanlines 8s linear infinite;
+  z-index: 0; /* Make sure it's behind your content */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* when the button is pressed, do an animation with it, it should be triggered on the tap down */
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
