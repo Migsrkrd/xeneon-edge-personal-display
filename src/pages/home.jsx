@@ -38,6 +38,8 @@ export default function Home() {
     },
   ];
 
+  const passwordGeneratorFullRoute = "/xeneon-edge-personal-display/password-generator";
+
   const imageStyle = {
     height: "140px",
     width: "140px",
@@ -83,7 +85,7 @@ export default function Home() {
           </button>
         ))}
         <a
-          href="/password-generator"
+          href={passwordGeneratorFullRoute}
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: "none" }}
