@@ -14,6 +14,7 @@ A small React (Vite) app that acts as a personal launcher/dashboard and includes
 
 ---
 
+
 ## Usage 🚀
 
 1. Install dependencies:
