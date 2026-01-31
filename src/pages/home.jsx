@@ -38,7 +38,7 @@ export default function Home() {
     },
   ];
 
-  const passwordGeneratorFullRoute = "/xeneon-edge-personal-display/password-generator";
+  const passwordGeneratorFullRoute = "/#/password-generator";
 
   const imageStyle = {
     height: "140px",
