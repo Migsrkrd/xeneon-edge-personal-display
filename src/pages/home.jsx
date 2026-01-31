@@ -4,7 +4,7 @@ import gmailLogo from "../assets/gmail.png";
 import hatClubLogo from "../assets/hat_club.png";
 import spotifyLogo from "../assets/spotify.png";
 import discordLogo from "../assets/discord.jpg";
-import excelLogo from "../assets/excel.png";
+import excelLogo from "../assets/excel.jpg";
 import slackLogo from "../assets/slack.png";
 import bambuLogo from "../assets/bambu.png";
 import passwordGenerator from "../assets/password_generator.png";
